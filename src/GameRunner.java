@@ -9,11 +9,11 @@ public class GameRunner {
         System.out.print("Now, which door will you choose? (1, 2, or 3) ");
         int playerChoice = scan.nextInt();
 
-        MontyHallGame game = new MontyHallGame(playerChoice);
-        game.Game();
+        MontyHallGame instance = new MontyHallGame(playerChoice);
+        instance.game();
 
-        System.out.println("Do you want to switch your guess? Yes or No (caps sensitive): ");
+        System.out.print("Do you want to switch your guess? Yes or No (caps sensitive): ");
         String swap = scan.nextLine();
-        game.swap(swap);
+        instance.swap(swap);
     }
 }

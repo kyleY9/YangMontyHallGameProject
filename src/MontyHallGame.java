@@ -14,7 +14,7 @@ public class MontyHallGame {
     }
 
     // methods
-    public void Game() {
+    public void game() {
         setValues();
         if (playerChoice == 1) {
             if (doorTwo.equals("bomb")) {
@@ -43,11 +43,71 @@ public class MontyHallGame {
         }
     }
 
-            public void swap(String swap) {
-                if (swap.equals("Yes")) {
-
+    public void swap(String swap) {
+        if (swap.equals("Yes")) {
+            if (playerChoice == 1 && revealedDoor == 2) {
+                System.out.println("Choice swapped from 1 to 3");
+                if (doorThree.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                } else {
+                    System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
+                }
+            } else if (playerChoice == 1 && revealedDoor == 3) {
+                System.out.println("Choice swapped from 1 to 2");
+                if (doorTwo.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                } else {
+                    System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
+                }
+            } else if (playerChoice == 2 && revealedDoor == 1) {
+                System.out.println("Choice swapped from 2 to 3");
+                if (doorThree.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                } else {
+                    System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
+                }
+            } else if (playerChoice == 2 && revealedDoor == 3) {
+                System.out.println("Choice swapped from 2 to 1");
+                if (doorOne.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                } else {
+                    System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
+                }
+            } else if (playerChoice == 3 && revealedDoor == 1) {
+                System.out.println("Choice swapped from 3 to 2");
+                if (doorTwo.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                } else {
+                    System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
+                }
+            } else if (playerChoice == 3 && revealedDoor == 2) {
+                System.out.println("Choice swapped from 3 to 1");
+                if (doorOne.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                } else {
+                    System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
                 }
             }
+        } else {
+            if (playerChoice == 1) {
+                if (doorOne.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                }
+            } else if (playerChoice == 2) {
+                if (doorTwo.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                }
+            } else if (playerChoice == 3) {
+                if (doorThree.equals("lamborghini")) {
+                    System.out.println("You won a brand new lamborghini! Congrats!");
+                }
+            } else {
+                System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
+            }
+        }
+    }
+
+
     public void setValues() {
         int rand = (int) (Math.random()*3) + 1;
         if (rand == 1) {
