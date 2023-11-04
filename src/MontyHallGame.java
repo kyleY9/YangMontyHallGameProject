@@ -116,14 +116,12 @@ public class MontyHallGame {
         } else {
             doorOne = "bomb";
         }
-        if (doorOne.equals("lamborghini")) {
-            doorTwo = "bomb";
-        } else if (rand == 2) {
+         if (rand == 2) {
             doorTwo = "lamborghini";
         } else {
             doorTwo = "bomb";
         }
-        if ((!(doorOne.equals("lamborghini") || doorTwo.equals("lamborghini")))) {
+        if (rand == 3) {
             doorThree = "lamborghini";
         } else {
             doorThree = "bomb";
