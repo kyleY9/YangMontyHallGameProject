@@ -13,6 +13,7 @@ public class GameRunner {
         instance.game();
 
         System.out.print("Do you want to switch your guess? Yes or No (caps sensitive): ");
+        scan.nextLine();
         String swap = scan.nextLine();
         instance.swap(swap);
     }

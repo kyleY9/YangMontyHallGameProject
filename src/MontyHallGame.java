@@ -92,21 +92,22 @@ public class MontyHallGame {
             if (playerChoice == 1) {
                 if (doorOne.equals("lamborghini")) {
                     System.out.println("You won a brand new lamborghini! Congrats!");
+                    return;
                 }
             } else if (playerChoice == 2) {
                 if (doorTwo.equals("lamborghini")) {
                     System.out.println("You won a brand new lamborghini! Congrats!");
+                    return;
                 }
             } else if (playerChoice == 3) {
                 if (doorThree.equals("lamborghini")) {
                     System.out.println("You won a brand new lamborghini! Congrats!");
+                    return;
                 }
-            } else {
-                System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
             }
+            System.out.println("! ! ! BOOM ! ! !\nYou.Are.Dead.");
         }
     }
-
 
     public void setValues() {
         int rand = (int) (Math.random()*3) + 1;
@@ -115,7 +116,6 @@ public class MontyHallGame {
         } else {
             doorOne = "bomb";
         }
-
         if (doorOne.equals("lamborghini")) {
             doorTwo = "bomb";
         } else if (rand == 2) {
@@ -123,7 +123,6 @@ public class MontyHallGame {
         } else {
             doorTwo = "bomb";
         }
-
         if ((!(doorOne.equals("lamborghini") || doorTwo.equals("lamborghini")))) {
             doorThree = "lamborghini";
         } else {
